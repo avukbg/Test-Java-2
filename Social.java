@@ -29,14 +29,15 @@ public class Social {
     public void downloadMreza(DrustvenaMreza d) {
         boolean b = true;
         for (DrustvenaMreza x : getMreze()) {
-            if (x.getClass() == d.getClass())
-                b = false;
-                break;
-        }
-        if (b) {
-            mreze.add(d);
+             if (x.getClass().equals(d.getClass())) {
+            b = false;
+            break;
         }
     }
+    if (b) {
+        mreze.add(d);
+    }
+}
 
 
     public void deleteFacebook() {
